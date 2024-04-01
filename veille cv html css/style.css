@@ -78,7 +78,7 @@
             background-color: #ffffff;
             width: 250px;
             height: 260px;
-            box-shadow: 0 0 10px .2px hsl(0, 0%, 100%);
+            box-shadow: 0 0 3px .1px hsl(0, 0%, 84%);
         }
         
         .about-me {
