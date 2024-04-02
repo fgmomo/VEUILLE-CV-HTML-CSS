@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main  # Déclenche le déploiement à chaque push sur la branche principale
 
 jobs:
   deploy:
@@ -11,13 +11,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      
-      - name: Move CV files to root
-        run: mv veille\ cv\ html\ css/* .
-      
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_dir: ./
-          publish_branch: main
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Utilise le jeton d'accès par défaut de GitHub
+          publish_dir: ./veille\ cv\ html\ css  # Spécifie le répertoire à déployer
+          publish_branch: gh-pages  # Spécifie la branche de déploiement
