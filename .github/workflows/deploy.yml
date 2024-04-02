@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v2
       
       - name: Move CV files to root
-        run: mv veille cv html css/* .
+        run: mv veille\ cv\ html\ css/* .
       
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
