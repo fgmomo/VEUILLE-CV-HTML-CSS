@@ -1,8 +1,16 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: projetCV
 
 on:
-  # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: installation 
+      run: echo 'install dependencies'
