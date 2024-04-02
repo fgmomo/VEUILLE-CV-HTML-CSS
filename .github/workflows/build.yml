@@ -1,0 +1,22 @@
+name: projetCV
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: installation 
+      run: echo 'install dependencies'
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./veille\ cv\ html\ css  # Spécifie le répertoire contenant les fichiers à déployer
+        publish_branch: main
