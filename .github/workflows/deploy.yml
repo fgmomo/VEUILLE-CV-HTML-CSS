@@ -15,6 +15,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # Utilise le jeton d'accès par défaut de GitHub
-          publish_dir: ./veille\ cv\ html\ css  # Spécifie le répertoire à déployer
-          publish_branch: gh-pages  # Spécifie la branche de déploiement
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./projetCv  
+          publish_branch: gh-pages  
